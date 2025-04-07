@@ -11,7 +11,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - postgres-data:/var/lib/postgresql/data
+      - cliente_postgres_data:/var/lib/postgresql/data
 
   rabbitmq:
     image: rabbitmq:3-management
@@ -25,7 +25,7 @@ services:
 
   cliente-service:
     build:
-      context: . # ← Altere conforme sua pasta real
+      context: . # ← Altere conforme necessário
     container_name: cliente-service
     ports:
       - "8081:8081"
@@ -36,4 +36,4 @@ services:
       - rabbitmq
 
 volumes:
-  postgres-data:
+  cliente_postgres_data:

@@ -12,4 +12,5 @@ public interface ClienteGateway {
     Optional<Cliente> buscarPorCpf(String cpf);
     List<Cliente> listarTodos();
     void deletarPorId(UUID id);
+    Cliente atualizar(Cliente cliente);
 }

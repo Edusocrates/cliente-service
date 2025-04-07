@@ -44,4 +44,9 @@ public class ClienteRepositoryAdapter implements ClienteGateway {
         repository.deleteById(id);
     }
 
+    @Override
+    public Cliente atualizar(Cliente cliente) {
+        return repository.save(cliente);
+    }
+
 }
