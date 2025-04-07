@@ -8,11 +8,13 @@ import com.fiap.rm358568.edusocrates.cliente_service.dominio.entities.Endereco;
 import com.fiap.rm358568.edusocrates.cliente_service.dominio.gateways.ClienteGateway;
 import com.fiap.rm358568.edusocrates.cliente_service.dominio.usecases.AtualizarClienteUseCase;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.UUID;
 
 @RequiredArgsConstructor
+@Service
 public class AtualizarClienteUseCaseImpl implements AtualizarClienteUseCase {
 
     private final ClienteGateway clienteGateway;
