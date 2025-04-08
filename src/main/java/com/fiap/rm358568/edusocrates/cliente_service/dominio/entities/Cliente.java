@@ -31,9 +31,8 @@ public class Cliente {
     private List<Endereco> enderecos = new ArrayList<>();
 
 
-    public Cliente(UUID id, String nome, String cpf, LocalDate dataNascimento, List<Endereco> enderecos) {
+    public Cliente( String nome, String cpf, LocalDate dataNascimento, List<Endereco> enderecos) {
         validarCpf(cpf);
-        this.id = id;
         this.nome = nome;
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;

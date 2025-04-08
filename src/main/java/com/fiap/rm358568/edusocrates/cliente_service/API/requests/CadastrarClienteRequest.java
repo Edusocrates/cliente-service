@@ -27,7 +27,7 @@ public record CadastrarClienteRequest(
 
 ) {
     public Cliente toDomain() {
-        Cliente cliente = new Cliente(null, nome, cpf, dataNascimento, new ArrayList<>());
+        Cliente cliente = new Cliente( nome, cpf, dataNascimento, new ArrayList<>());
 
         List<Endereco> enderecosDomain = enderecos
                 .stream()
