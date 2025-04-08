@@ -77,6 +77,23 @@
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
 			<version>2.8.6</version>
 		</dependency>
+
+		<!-- configuracoes para testes unitarios -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-junit-jupiter</artifactId>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -101,6 +118,15 @@
 						<goals>
 							<goal>report</goal>
 						</goals>
+						<configuration>
+							<excludes>
+								<exclude>com/fiap/rm358568/edusocrates/cliente_service/infraestrutura/adapters/**</exclude>
+								<exclude>com/fiap/rm358568/edusocrates/cliente_service/API/requests/**</exclude>
+								<exclude>com/fiap/rm358568/edusocrates/cliente_service/infraestrutura/config/**</exclude>
+								<exclude>com/fiap/rm358568/edusocrates/cliente_service/API/exceptions/**</exclude>
+								<exclude>com/fiap/rm358568/edusocrates/cliente_service/dominio/entities/**</exclude>
+							</excludes>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
