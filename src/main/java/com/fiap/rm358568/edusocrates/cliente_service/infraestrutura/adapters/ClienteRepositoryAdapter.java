@@ -52,7 +52,7 @@ public class ClienteRepositoryAdapter implements ClienteGateway {
     @Override
     public List<Cliente> listarTodos() {
         log.info("Listando todos os clientes na base!");
-        return repository.findAll();
+        return repository.findAllComEnderecos();
     }
 
     @Override

@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -15,4 +16,7 @@ public interface ClienteRepository extends JpaRepository<Cliente, UUID> {
 
     @Query("SELECT c FROM Cliente c LEFT JOIN FETCH c.enderecos WHERE c.id = :id")
     Optional<Cliente> buscarPorId(@Param("id") UUID id);
+
+    @Query("SELECT c FROM Cliente c LEFT JOIN FETCH c.enderecos")
+    List<Cliente> findAllComEnderecos();
 }
